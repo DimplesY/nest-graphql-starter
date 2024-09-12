@@ -1,0 +1,11 @@
+{
+  "explorer.fileNesting.enabled": false,
+  "prettier.enable": true,
+  "eslint.validate": [
+    "javascript",
+    "typescript"
+  ],
+  "cSpell.words": [
+    "earer"
+  ]
+}

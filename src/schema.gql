@@ -1,0 +1,79 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Login {
+  """登录的 token"""
+  accessToken: String!
+}
+
+type Mutation {
+  createUser(user: UserInput!): User!
+}
+
+type Post {
+  """文章内容"""
+  content: String!
+
+  """创建时间"""
+  createdTime: Timestamp
+
+  """编号"""
+  id: Int!
+
+  """是否删除"""
+  isDeleted: Boolean!
+
+  """文章标题"""
+  title: String!
+
+  """更新时间"""
+  updatedTime: Timestamp
+
+  """文章作者"""
+  user: User!
+
+  """文章作者编号"""
+  userId: Int!
+}
+
+type Query {
+  login(
+    """密码"""
+    password: String!
+
+    """用户名"""
+    username: String!
+  ): Login!
+  user(id: Int!): User!
+  userInfo: User!
+  userList(skip: Int! = 0, take: Int! = 10): [User!]!
+}
+
+"""
+`Date` type as integer. Type represents date and time as number of milliseconds from start of UNIX epoch.
+"""
+scalar Timestamp
+
+type User {
+  """创建时间"""
+  createdTime: Timestamp
+
+  """编号"""
+  id: Int!
+
+  """密码"""
+  password: String!
+  post: [Post!]!
+
+  """更新时间"""
+  updatedTime: Timestamp
+
+  """用户名"""
+  username: String!
+}
+
+input UserInput {
+  password: String!
+  username: String!
+}
