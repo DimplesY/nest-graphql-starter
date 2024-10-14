@@ -9,7 +9,6 @@ import PrismaService from './service/prisma.service'
 import { JwtModule } from '@nestjs/jwt'
 import { APP_GUARD } from '@nestjs/core'
 import { AuthGuard } from './guard/auth.guard'
-import { EventsGateway } from './gateway/events.gateway'
 
 @Module({
   imports: [
@@ -38,7 +37,6 @@ import { EventsGateway } from './gateway/events.gateway'
     PrismaService,
     UserService,
     UserReslover,
-    EventsGateway,
   ],
 })
 export class AppModule {}
