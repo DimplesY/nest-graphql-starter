@@ -1,11 +1,13 @@
 # nest-graphql-starter
 
-A nestjs graphql starter
+A minimal nest.js graphql starter
 
-## 技术栈
+## Features
 
 - nestjs
 - postgresql
 - redis
 - prisma
 - graphql
+
+## Getting Started
