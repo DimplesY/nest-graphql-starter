@@ -1,4 +1,4 @@
-import { UserService } from './../service/user.service'
+import { UserService } from '@/service/user.service'
 import {
   Args,
   Context,
