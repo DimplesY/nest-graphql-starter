@@ -44,7 +44,7 @@ export class UserReslover {
   }
 
   @ResolveField('post', () => [Post])
-  async getPostList(@Parent() user: User) {
+  getPostList(@Parent() user: User) {
     return this.userService.findPostByUserId(user.id)
   }
 
